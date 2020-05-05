@@ -1,0 +1,55 @@
+<!--
+
+- Confeccionar un formulario que muestre un checkbox que cuando se tilde active un botón 
+(el checkbox debe mostrar un mensaje que diga : "Confirma los términos y condiciones?").
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+    <form>
+        Ingrese su nombre:
+        <input type="text" id="nombre">
+        <br>
+        Ingrese su mail:
+        <input type="mail" id="mail">
+        <br>
+        Ingrese su contaseña:
+        <input type="password" id="mail">
+    </form>
+Confirma los términos y condiciones?
+  <input type="checkbox" id="checkbox1" name="checkbox1" checked>
+  <br>
+  <input type="button" id="boton1" value="iniciar seccion" >
+
+
+<script>
+  addEventListener('DOMContentLoaded',inicio,false);
+
+  function inicio()
+  {
+    document.getElementById('checkbox1').addEventListener('change',cambiocheckbox,false);
+  }
+
+  function cambiocheckbox()
+  {
+    if (document.getElementById('checkbox1').checked==true){
+        document.getElementById('boton1').disabled=false;
+    }else{
+        if(document.getElementById('boton1').disabled=true){
+            document.getElementById('boton1').disabled=true;   
+            }
+        }   
+    }
+
+</script>
+
+</body>
+</html>
+
+
+
